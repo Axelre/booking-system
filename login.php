@@ -1,3 +1,11 @@
+<?php
+if(isset($GET['code'])){
+    $accessToken = getAccessTokenWithCode($_GET['code']);
+    echo '<pre>';
+    print_r($accessToken);
+    die(); 
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,12 +31,19 @@
                     <input type="text" class="input-field" placeholder="Enter Username" name="uid" required>
                     <input type="password" class="input-field" placeholder="Enter Password"  name="pwd" required>
                     <input type="submit" class="submit-btn" name ="btnLoginAccount" value="Login"></input>
+                    
                 </form>
                 <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <input type="text" placeholder="Enter E-mail" name="email" class="input-field" required>
                     <input type="text" placeholder="Enter Username" name="username" class="input-field" required>
                     <input type="password" placeholder="Enter Password" name="password" class="input-field" required>
                     <input type="submit" class="submit-btn" name ="btnCreateAccount" value="Create Account"></input>
+                    <div class="section-action-container">
+                    <a href="#" class="a-fb">
+                    <div class="fb-button-container">
+                    Login with Facebook(PHP)
+                    </div>
+                    </a>
                 </form>
             </div>
         </div>
