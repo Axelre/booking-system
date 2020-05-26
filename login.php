@@ -6,6 +6,7 @@
         <?php include 'db.php';
         include 'Databaseinfo.php';
         session_start();
+        
         ?>
     </head>
     <body>
