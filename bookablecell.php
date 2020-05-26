@@ -40,12 +40,23 @@ class BookableCell
  
     private function openCell($date)
     {
-        return '<div class="open">' . $this->bookingForm($date) . '</div>';
+        return 
+        '<div class="open">' .
+        '<span class="datum">'.$date .'</span>'  .
+        '</style>' .
+    
+        $this->bookingForm($date) . 
+        
+
+              '</div>';
+       
+        
     }
  
     private function bookedCell($date)
     {
-        // if ($_SESSION['user_id'];)
+    
+        // if ($_SESSION['user_id'] = ;)
         // {
         //     return '<div class="bookedme">' . $this->deleteForm($this->bookingId($date)) . '</div>'
         // }
@@ -92,8 +103,9 @@ class BookableCell
             '<form  method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="add" />' .
             '<input type="hidden" name="date" value="' . $date . '" />' .
-            '<input class="submit" type="submit" value="Book" />' .
+            '<input class="submit" type="submit" value="Book" />' . 
             '</form>';
+            
     }
  
     private function deleteForm($id)
