@@ -45,6 +45,10 @@ class BookableCell
  
     private function bookedCell($date)
     {
+        // if ($_SESSION['user_id'];)
+        // {
+        //     return '<div class="bookedme">' . $this->deleteForm($this->bookingId($date)) . '</div>'
+        // }
         return '<div class="booked">' . $this->deleteForm($this->bookingId($date)) . '</div>';
     }
  
