@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<php?
-$url = https://api.openweathermap.org/data/2.5/onecall?lat=59.8586&lon=17.6389&units=metric&appid=8704ed9bc9d4d04fcfe7d10ced95aead;
-$getweather = simplexml_load_file($url);
-$getTemp = $getweather->current->temp->
-</php>
 <html lang="en">
 <head>
-    <link rel="icon" 
-      type="image/png" 
-      href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
@@ -21,9 +13,8 @@ $getTemp = $getweather->current->temp->
     <link rel="stylesheet" href="apistyle.css">
 </head>
     <body>
-        <div class="weather-container">
-            <img class="icon">
-            <p class="weather"></p>
-            <p class="temp"></p>
-        </div>
+    <div id = "owmData" style = "background-color:#cc0;">
+    <button id=getIt>Click</button>
+        Weather data should go here.
+    </div>
     </body>
