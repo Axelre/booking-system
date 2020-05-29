@@ -44,12 +44,14 @@ else
 
             
               <div class="col-lg-6">
+
               <div><div class='box green'></div> <p>= Tillgänglig</p></div>
               
-<br>
-<div><div class='box red'></div> <p>= Bokad av någon annan</p></div>
-<br>
-<div><div class='box purple'></div><p>= Bokad av mig</p></div>
+              <br>
+              <div><div class='box red'></div> <p>= Bokad av någon annan</p></div>
+              <br>
+              <div><div class='box purple'></div><p>= Bokad av mig</p></div>
+              
                   <?php
 
 
@@ -74,6 +76,7 @@ echo $calendar->show();
 ?>
 
 </div>
+
 
             
  </div>
