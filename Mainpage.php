@@ -47,7 +47,7 @@ position: absolute;
         </div>
         <div class="topnav">
             <a class="home" href="#home">Home</a>
-            <a href="#profile">Profile</a>
+            <a href="#bulletinboard">Bulletin board</a>
             <a href="Logout.php">Log Out</a>
             <a href="Mybookings.php">My bookings</a>
           </div>
