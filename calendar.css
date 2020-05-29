@@ -145,6 +145,11 @@ div.booked {
     line-height: inherit;
 }
 
+span.datum{
+    color:white;
+    
+}
+
 div.bookedme{
     background: rgb(17, 0, 252);
     width: 100%;

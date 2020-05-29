@@ -1,14 +1,6 @@
 <!DOCTYPE html>
-<php?
-$url = https://api.openweathermap.org/data/2.5/onecall?lat=59.8586&lon=17.6389&units=metric&appid=8704ed9bc9d4d04fcfe7d10ced95aead;
-$getweather = simplexml_load_file($url);
-$getTemp = $getweather->current->temp->
-</php>
 <html lang="en">
 <head>
-    <link rel="icon" 
-      type="image/png" 
-      href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API</title>
@@ -17,13 +9,21 @@ $getTemp = $getweather->current->temp->
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous">
     </script>
-    <script>scr="script.js"</script>
+    <script type="text/javascript" scr="script.js"></script>
     <link rel="stylesheet" href="apistyle.css">
 </head>
     <body>
-        <div class="weather-container">
-            <img class="icon">
-            <p class="weather"></p>
-            <p class="temp"></p>
-        </div>
+
+    <div class="input">
+        <input type="submit" class="button" value="Submit">
+    
+    </div>
+    <div class="display">
+        <h1 class="name"></h1>
+        <p class="desc"></p>
+        <p class="temp"></p>
+    </div>
+    <script>
+        test();
+    </script>
     </body>
