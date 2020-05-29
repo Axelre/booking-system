@@ -118,7 +118,7 @@ class BookableCell
         
 
         return
-            '<form onsubmit="return confirm(\'Are you sure to cancel?\');" method="post" action="' . $this->currentURL . '">' .
+            '<form onsubmit="return confirm(\'Är du säker på att du vill avboka?\');" method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="delete" />' .
             '<input type="hidden" name="id" value="' . $id . '" />' .
             '<input class="submit" type="submit" value="Avboka" />' .
