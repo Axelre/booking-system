@@ -1,6 +1,5 @@
 <?php
-session_start();
-include_once __DIR__ . '/php/facebook_api.php';
-define('FB_GRAPH_VERSION', 'v6.0');
-define('FB_GRAPH_DOMAIN', 'https://graph.facebook.com/');
-define('FB_APP_STATE', 'eciphp');
+
+define('FB_APP_ID', '3051018188348914');
+define('FB_APP_SECRET', 'aecc3b100b8ba65079996d97db766f5b');
+define('FB_REDIRECT', 'http://localhost/login.php');

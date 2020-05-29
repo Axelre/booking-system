@@ -27,6 +27,12 @@ body
 
 
 }
+#mapid { height: 300px; 
+    width: 300px;
+    position: absolute;
+  left: 2;
+  top: 14%;
+    }
 
 #bottominfo{
     margin: bottom;
