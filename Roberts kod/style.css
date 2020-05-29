@@ -1,0 +1,120 @@
+Body
+{
+    background-color: grey;    
+}
+
+#Container
+{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+}
+
+#PostAndComments
+{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+    margin-top: 130px;
+    display:block;
+}
+
+#Sidebar
+{
+    color: white;
+    position: fixed;
+    left: 0;
+    width: 160px;
+    display:block;
+    float: left;
+    background-color: gold;
+    height: 100%;
+}
+
+#Header ul
+{
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.HeaderPoints ul li
+{
+    color: red;
+}
+
+#Sidebar ul
+{
+    color: white;
+    list-style-type: none;
+}
+
+.CommentBox
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 4px;
+    background-color: lightblue;
+    border-radius: 4px;
+}
+
+.PostBox
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 4px;
+    background-color: blue;
+    border-radius: 4px;
+}
+
+.h4title
+{
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.h4signature
+{
+    font-weight: bold;
+    font-style: italic;
+    font-size: large;
+}
+
+#Thread
+{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    margin-top: 130px;
+    padding-top: 5%;
+    text-align: center;
+}
+
+.error
+{
+    color: red
+}
+
+.CommentError
+{
+    color: red;
+    margin-left: 45%;
+    font-size: large;
+}
+.CommentSuccess
+{
+    color: lightgreen;
+    margin-left: 45%;
+    font-size: large;
+}
+
+.success
+{
+    color: lightgreen
+}
