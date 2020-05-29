@@ -27,17 +27,7 @@ else
    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
-   <style>
-
-#mapid { height: 300px; 
-width: 300px;
-position: absolute;
-  left: 2;
-  top: 14%;
-    }
-}
-
-   </style>
+   
  
 </head>
 <body>
@@ -46,21 +36,20 @@ position: absolute;
             <h1>TAKTERASSEN</h1>
         </div>
         <div class="topnav">
-            <a class="home" href="#home">Home</a>
-            <a href="#bulletinboard">Bulletin board</a>
-            <a href="Logout.php">Log Out</a>
-            <a href="Mybookings.php">My bookings</a>
+            <a class="home" href="#home">Hem</a>
+            <a href="#bulletinboard">Bulletin</a>
+            <a href="Logout.php">Logga ut</a>
           </div>
           <div class="row">
 
             
               <div class="col-lg-6">
-              <div><div class='box green'></div> <p>= Available day</p></div>
+              <div><div class='box green'></div> <p>= Tillgänglig</p></div>
               
 <br>
-<div><div class='box red'></div> <p>= Booked by others</p></div>
+<div><div class='box red'></div> <p>= Bokad av någon annan</p></div>
 <br>
-<div><div class='box purple'></div><p>= Booked by me</p></div>
+<div><div class='box purple'></div><p>= Bokad av mig</p></div>
                   <?php
 
 
