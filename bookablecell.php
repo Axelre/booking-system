@@ -1,5 +1,5 @@
 <?php
- 
+
  
 class BookableCell
 {
@@ -40,27 +40,19 @@ class BookableCell
  
     private function openCell($date)
     {
-        return 
-        '<div class="open">' .
-        '<span class="datum">'.$date .'</span>'  .
-        '</style>' .
-    
-        $this->bookingForm($date) . 
-        
-
-              '</div>';
-       
-        
+        return '<div class="open">  '. $date . '      ' . $this->bookingForm($date) . '</div>';
     }
  
     private function bookedCell($date)
     {
-    
-        // if ($_SESSION['user_id'] = ;)
-        // {
-        //     return '<div class="bookedme">' . $this->deleteForm($this->bookingId($date)) . '</div>'
-        // }
-        return '<div class="booked">' . $this->deleteForm($this->bookingId($date)) . '</div>';
+        include 'db.php';
+        $userid = $_SESSION['user_id'];
+
+        if ($this->UserId($date) === $userid) {return '<div class="bookedbyme">'. $date . ' ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
+
+
+        else {return '<div class="booked">   '. $date . '       ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
+        
     }
  
     private function isDateBooked($date)
@@ -85,6 +77,18 @@ class BookableCell
  
         return $result['id'];
     }
+
+    private function Userid($date)
+    {
+        
+        $booking = array_filter($this->booking->index(), function ($record) use ($date) {
+            return $record['booking_date'] == $date;
+        });
+
+        $result = array_shift($booking);
+ 
+        return $result['User_id'];
+    }
  
     private function deleteBooking($id)
     {
@@ -103,9 +107,8 @@ class BookableCell
             '<form  method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="add" />' .
             '<input type="hidden" name="date" value="' . $date . '" />' .
-            '<input class="submit" type="submit" value="Book" />' . 
+            '<input class="submit" type="submit" value="Book" />' .
             '</form>';
-            
     }
  
     private function deleteForm($id)
