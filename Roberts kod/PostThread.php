@@ -1,15 +1,4 @@
-<?php 
-include ('../Foruminfo.php');
-include ('../db.php');
-if ( isset( $_SESSION['user_id'] ) ) 
-{
-	
-} 
-else 
-{
-    header("Location: Login.php");
-}
-?>
+
 <!DOCTYPE html>
 <html>
 	<head>

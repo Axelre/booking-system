@@ -1,13 +1,16 @@
 <?php
+include ('feed.php');
+include ('db.php');
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
 
-    <title>Takterassen</title>
-        <link rel="stylesheet" href="mainpagestyle.css"
+    <title>Bulletin board</title>
+        <link rel="stylesheet" href="bulletinboardstyling.css"
             type="text/css">
             <?php
 
@@ -20,23 +23,62 @@ session_start();
     <div id="container">
         <div id="header">
             <h1>Takterassen</h1>
+            <div id="logout" align="right">
+            <!--logga ut-knappen -->
+            <a id="logoutbtn" href='Logout.php' >Logga ut  </a>
+            </div>
+        </div>
+
         <div id="content">
             <div id="upload">
                 <h3>Lägg upp ett inlägg:</h3>
                 <form name="info" id="info"   method="post">
-                    <label for="Post">Inlägg:</label><br>
-                    <textarea name="Post" id= "Post" required></textarea><br>
-                    <input id="submitbtn" name="submit_data" type="submit" value="Publicera!">
+                    		<div id="Thread">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return Validate_Thread()">
+                    <h2>Title</h2>   <br />
+                    <input class="inp" type="text" placeholder="Enter Title" name="title" required id = "title"> 
+					<h2>Post</h2><br />
+                    <textarea cols=60 rows=10 name="thread" id="thread"></textarea><br />
+					<input type ="submit" name ="btnSubmitThread" value="Post Thread"> <br />
+                    <span class="error"> <?php if(isset($formError)) echo $formError;?></span> <br />
+                    <span class="success"> <?php if(isset($formSuccess)) echo $formSuccess;?></span> <br />
                     </form>
         
                 </form>
             </div>
             <div id="posts">
                 <h3>Upplagda inlägg:</h3>
-                <?php
-                //funktioner för att hämta och skriva ut kommentarer
-              
-                ?>
+                <?php $sql = $db->query('SELECT * FROM Threads'); ?>
+					<ul>
+						<?php while ($row = $sql->fetch())
+						{?>
+							<li>
+							<?php $id = $row['ThreadID']?>
+							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
+							<input type ="hidden" name ='IDvalue' value="<?php echo $row['ThreadID'] ?>"></input>
+							<button type ="submit" name ="btnChooseThread"><?php echo $row['Title']?></button>
+							</form>
+							</li>
+				  		<?php } ?>
+					</ul>
+                    <div id="Post">
+					<?php
+					if (isset($_POST['btnChooseThread']))
+    				{
+						$ID = $_POST['IDvalue'];
+						$statement =$db->prepare('SELECT * FROM Threads WHERE ThreadID = :ID');
+						$statement->bindParam(':ID', $ID);
+						$statement->execute();
+        				while ($row = $statement->fetch())
+        				{
+            				echo "<div class='PostBox'>";
+							echo "<h4 class='h4title'>"; echo $row['Title']. "<br/>"; echo "</h4>";
+            				echo $row['TextPost']. "<br/>";
+        				}
+        				echo "</div>";
+					}
+					?>
+				</div>
             </div>
         </div>
     </div>
