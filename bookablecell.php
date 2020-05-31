@@ -51,7 +51,7 @@ class BookableCell
         if ($this->UserId($date) === $userid) {return '<div class="bookedbyme">'. $date . ' ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
 
 
-        else {return '<div class="booked">   '. $date . '       ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
+        else {return '<div class="booked">   '. $date . ' </div>';}
         
     }
  
@@ -103,21 +103,25 @@ class BookableCell
  
     private function bookingForm($date)
     {
+
+
         return
             '<form method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="add" />' .
             '<input type="hidden" name="date" value="' . $date . '" />' .
-            '<input class="submit" type="submit" value="Book" />' .
+            '<input class="submit" type="submit" value="Boka" />' .
             '</form>';
     }
  
     private function deleteForm($id)
     {
+        
+
         return
-            '<form onsubmit="return confirm(\'Are you sure to cancel?\');" method="post" action="' . $this->currentURL . '">' .
+            '<form onsubmit="return confirm(\'Är du säker på att du vill avboka?\');" method="post" action="' . $this->currentURL . '">' .
             '<input type="hidden" name="delete" />' .
             '<input type="hidden" name="id" value="' . $id . '" />' .
-            '<input class="submit" type="submit" value="Delete" />' .
+            '<input class="submit" type="submit" value="Avboka" />' .
             '</form>';
     }
 }
