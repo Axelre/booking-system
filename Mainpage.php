@@ -59,6 +59,9 @@ else
               <br>
               <div><div class='box purple'></div><p>= Bokad av mig</p></div>
               
+              
+
+              
                   <?php
 
 
@@ -83,6 +86,10 @@ echo $calendar->show();
 ?>
 
 </div>
+<h4> Blå pil = Din position</h4>
+              <h4> 
+              Grön pil = Takterassens position
+              </h4>
 
 
             
@@ -90,6 +97,7 @@ echo $calendar->show();
              
 </div>
 <div id="mapid"></div>
+
   <SCRIPT>  
    const mymap = L.map('mapid').setView([59.85819839999999, 17.646541800000022],12);
    const attribution =  '&copy; <a href = "https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
@@ -133,7 +141,6 @@ echo $calendar->show();
         <p id="humidity"></p></br>
         <p id="desc"></p></br>
     </div><!--paragrafer och ikoner som kommer att fyllas med information vi hämtar via vår väderapi-->
-<img src="marker-icon-2x-green.png" width="10px" height="15"> 
 
 <script>
 
@@ -180,7 +187,7 @@ function capitalizeFLetter(string)
     var rstring = string[0].toUpperCase() +  
     string.slice(1); 
     return rstring; 
-  } //Funktion för att få en stor bokstav i början av vår inhämtade väderbeskrivning
+  } //Funktion för att få en tor bokstav i början av vår inhämtade väderbeskrivning
 </script>
           
 </body>

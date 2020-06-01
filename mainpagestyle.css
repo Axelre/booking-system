@@ -175,9 +175,14 @@ h2{
     color: lightcyan;
   }
 
-  img{
-    margin-bottom: 100px;
-    width: 10px;
-    height: 15px;
+  h4{
+    text-align: left;
+    margin-left: 29px;
+    line-height: 0px;
+    width: 400px;
+    margin-bottom: -70px;
+    
 
   }
+
+  
