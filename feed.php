@@ -1,6 +1,5 @@
 <?php
 session_start();
-global $formError;
 
 if (isset($_POST["btnSubmitThread"]))
 {
