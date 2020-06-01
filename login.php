@@ -24,8 +24,7 @@
                     <input type="text" class="input-field" placeholder="Enter Username" name="uid" required>
                     <input type="password" class="input-field" placeholder="Enter Password"  name="pwd" required>
                     <input type="submit" class="submit-btn" name ="btnLoginAccount" value="Login"></input>
-                    
-                </form>
+                    </form><!--Loginform-->
                 <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return registererrorhandling();";>
                     <input type="text" placeholder="Enter E-mail" name="email" class="input-field" required>
                     <input type="text" placeholder="Enter Username" name="username" class="input-field" required>

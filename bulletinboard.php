@@ -11,16 +11,8 @@ date_default_timezone_set('Europe/Stockholm');
 
 <script src="jquery-3.5.1.min.js"></script>
     <title>Bulletin board</title>
-<<<<<<< HEAD
         <link rel="stylesheet" href="bulletinboardstyling.css"
             type="text/css">
-=======
-        <link rel="stylesheet" href="bulletinboardstyling.css" type="text/css">
-            <?php
-
-
- ?>
->>>>>>> f3e91e0cfb9f541d2b3e615e58a69e907cee566d
 </head>
 
 <body>

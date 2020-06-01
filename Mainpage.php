@@ -178,7 +178,7 @@ function capitalizeFLetter(string)
     var rstring = string[0].toUpperCase() +  
     string.slice(1); 
     return rstring; 
-  } //Funktion för att få en tor bokstav i början av vår inhämtade väderbeskrivning
+  } //Funktion för att få en stor bokstav i början av vår inhämtade väderbeskrivning
 </script>
           
 </body>
