@@ -38,7 +38,7 @@ include ('db.php');
                     <h2>Title</h2>   <br />
                     <input class="inp" type="text" placeholder="Enter Title" name="title" required id = "title"> 
 					<h2>Post</h2><br />
-                    <textarea cols=60 rows=10 name="thread" id="thread"></textarea><br />
+                    <textarea cols=40 rows=10 name="thread" id="thread"></textarea><br />
 					<input type ="submit" name ="btnSubmitThread" value="Post Thread"> <br />
                     <span class="error"> <?php if(isset($formError)) echo $formError;?></span> <br />
                     <span class="success"> <?php if(isset($formSuccess)) echo $formSuccess;?></span> <br />
@@ -50,7 +50,7 @@ include ('db.php');
                 <h3>Upplagda inlägg:</h3>
                 <?php $sql = $db->prepare('SELECT * FROM Threads');
                 $sql->execute();
-                $sql->set(PDO::FETCH_ASSOC); ?>
+                $sql->setFetchMode(PDO::FETCH_ASSOC); ?>
 					<ul>
 						<?php while ($row = $sql->fetch())
 						{?>

@@ -12,24 +12,29 @@ body{
 }
 #upload{
     padding: 10px 10px 10px 100px;
+    float :left;
 }
 #posts{
+       
     padding: 10px 100px 10px 10px;
-    
 }
+#Post{
+    position: absolute;
+    top:133px;
+    right:90px;
 
+}
 .PostBox{
     width: 445px;
-    padding:20px;
+    padding:50px;
     margin-bottom:4px;
     background-color: black;
     border-radius: 4px;
     color:white;
-    position:top;
-    float:right;
-    
+
 }
 #logout{
     padding-right:20px;
+    color:black;
 }
 
