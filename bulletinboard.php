@@ -50,7 +50,7 @@ include ('db.php');
                 <h3>Upplagda inlägg:</h3>
                 <?php $sql = $db->prepare('SELECT * FROM Threads');
                 $sql->execute();
-                $sql->setFetchMode(PDO::FETCH_ASSOC); ?>
+                $sql->set(PDO::FETCH_ASSOC); ?>
 					<ul>
 						<?php while ($row = $sql->fetch())
 						{?>

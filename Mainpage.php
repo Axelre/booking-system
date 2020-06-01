@@ -89,7 +89,7 @@ echo $calendar->show();
 </div>
 <div id="mapid"></div>
   <SCRIPT>  
-   const mymap = L.map('mapid').setView([59.85819839999999, 17.646541800000022],2);
+   const mymap = L.map('mapid').setView([59.85819839999999, 17.646541800000022],12);
    const attribution =  '&copy; <a href = "https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
    const tiles = L.tileLayer(tileUrl, {attribution});
