@@ -58,7 +58,7 @@ date_default_timezone_set('Europe/Stockholm');
 						<?php while ($row = $sql->fetch())
 						{?>
 							<li>
-                            <?php $id = $row['ThreadID']?>
+							<?php $id = $row['ThreadID']?>
 							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
 							<input type ="hidden" name ='IDvalue' value="<?php echo $row['ThreadID'] ?>"></input>
 							<button type ="submit" name ="btnChooseThread"><?php echo $row['Title']?></button>
@@ -77,8 +77,11 @@ date_default_timezone_set('Europe/Stockholm');
         				while ($row = $statement->fetch())
         				{
             				echo "<div class='PostBox'>";
-							echo "<h4 class='h4title'>"; echo $row['Title']. "<br/>"; echo "</h4>";
-            				echo $row['TextPost']. "<br/>";
+                            echo "<h4 class='h4title'>"; 
+                            echo $row['Title']. "<br/>"; 
+                            echo "</h4>";
+                            echo $row['TextPost']. "<br/>";
+                            echo $row['Date'];
         				}
         				echo "</div>";
 					}
