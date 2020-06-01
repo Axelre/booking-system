@@ -1,7 +1,7 @@
 <?php
 include ('feed.php');
 include ('db.php');
-
+date_default_timezone_set('Europe/Stockholm');
 
 ?>
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ function sortList()
                     <h2>Title</h2>   <br />
                     <input class="inp" type="text" placeholder="Enter Title" name="title" required id = "title"> 
 					<h2>Post</h2><br />
-                    <textarea cols=60 rows=10 name="thread" id="thread"></textarea><br />
+                    <textarea cols=40 rows=10 name="thread" id="thread"></textarea><br />
 					<input type ="submit" name ="btnSubmitThread" value="Post Thread"> <br />
                     <span class="error"> <?php if(isset($formError)) echo $formError;?></span> <br />
                     <span class="success"> <?php if(isset($formSuccess)) echo $formSuccess;?></span> <br />
@@ -100,15 +100,18 @@ function sortList()
 					<?php
 					if (isset($_POST['btnChooseThread']))
     				{
-						$ID = $_POST['IDvalue'];
+                        $ID = $_POST['IDvalue']; 
 						$statement =$db->prepare('SELECT * FROM Threads WHERE ThreadID = :ID');
 						$statement->bindParam(':ID', $ID);
 						$statement->execute();
         				while ($row = $statement->fetch())
         				{
             				echo "<div class='PostBox'>";
-							echo "<h4 class='h4title'>"; echo $row['Title']. "<br/>"; echo "</h4>";
-            				echo $row['TextPost']. "<br/>";
+                            echo "<h4 class='h4title'>"; 
+                            echo $row['Title']. "<br/>"; 
+                            echo "</h4>";
+                            echo $row['TextPost']. "<br/>";
+                            echo $row['Date'];
         				}
         				echo "</div>";
 					}
