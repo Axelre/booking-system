@@ -32,15 +32,24 @@ function CreateAccount()
             if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) 
             {
                 $emailError = "Invalid e-mail format";
+                {echo '<script language="javascript">';
+                    echo 'window.alert("Fel format på email")';
+                    echo '</script>';;}
             }
             else if (emailExists($Email))
             {
                 $duplEmail = "That E-mail is already in use";
+                {echo '<script language="javascript">';
+                    echo 'window.alert("Email redan tagen")';
+                    echo '</script>';;}
             }
         
             else if (usernameExists($Username))
             {
                 $duplUsername = "That Username is already in use";
+                {echo '<script language="javascript">';
+                    echo 'window.alert("Användarnamnet redan taget")';
+                    echo '</script>';;}
             }
             else
             {

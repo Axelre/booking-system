@@ -1,11 +1,3 @@
-<?php
-if(isset($GET['code'])){
-    $accessToken = getAccessTokenWithCode($_GET['code']);
-    echo '<pre>';
-    print_r($accessToken);
-    die(); 
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
