@@ -10,11 +10,16 @@ date_default_timezone_set('Europe/Stockholm');
 <head>
 
     <title>Bulletin board</title>
+<<<<<<< HEAD
+        <link rel="stylesheet" href="bulletinboardstyling.css"
+            type="text/css">
+=======
         <link rel="stylesheet" href="bulletinboardstyling.css" type="text/css">
             <?php
 
 
  ?>
+>>>>>>> f3e91e0cfb9f541d2b3e615e58a69e907cee566d
 </head>
 
 <body>
@@ -35,7 +40,7 @@ date_default_timezone_set('Europe/Stockholm');
                 <h3>Lägg upp ett inlägg:</h3>
                 <form name="info" id="info"   method="post">
                     		<div id="Thread">
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return Validate_Thread()">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <h2>Title</h2>   <br />
                     <input class="inp" type="text" placeholder="Enter Title" name="title" required id = "title"> 
 					<h2>Post</h2><br />
@@ -44,7 +49,7 @@ date_default_timezone_set('Europe/Stockholm');
                     <span class="error"> <?php if(isset($formError)) echo $formError;?></span> <br />
                     <span class="success"> <?php if(isset($formSuccess)) echo $formSuccess;?></span> <br />
                     </form>
-        
+                    <!--Form för att lägga upp ett inlägg -->
                 </form>
             </div>
             <div id="posts">
@@ -71,7 +76,8 @@ date_default_timezone_set('Europe/Stockholm');
 							</form>
 							</li>
 				  		<?php } ?>
-					</ul>
+                    </ul>
+                    <!--Lista med inläggstitlar som man kan trycka på för att få upp det aktuella inlägget -->
                     <div id="Post">
 					<?php
 					if (isset($_POST['btnChooseThread']))
@@ -91,7 +97,8 @@ date_default_timezone_set('Europe/Stockholm');
         				}
         				echo "</div>";
 					}
-					?>
+                    ?>
+                    <!--php-kod som hämtar ut det valda inlägget från databasen och visar det på sidan -->
 				</div>
             </div>
         </div>
