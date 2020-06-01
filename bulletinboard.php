@@ -12,41 +12,6 @@ date_default_timezone_set('Europe/Stockholm');
     <title>Bulletin board</title>
         <link rel="stylesheet" href="bulletinboardstyling.css"
             type="text/css">
-            <script>
-function sortList() 
-{
-  var list, i, switching, b, shouldSwitch;
-  list = document.getElementById("id01");
-  switching = true;
-  /* Make a loop that will continue until
-  no switching has been done: */
-  while (switching) {
-    // start by saying: no switching is done:
-    switching = false;
-    b = list.getElementsByTagName("LI");
-    // Loop through all list-items:
-    for (i = 0; i < (b.length - 1); i++) {
-      // start by saying there should be no switching:
-      shouldSwitch = false;
-      /* check if the next item should
-      switch place with the current item: */
-      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-        /* if next item is alphabetically
-        lower than current item, mark as a switch
-        and break the loop: */
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      /* If a switch has been marked, make the switch
-      and mark the switch as done: */
-      b[i].parentNode.insertBefore(b[i + 1], b[i]);
-      switching = true;
-    }
-  }
-}
-</script>
 </head>
 
 <body>
@@ -65,7 +30,7 @@ function sortList()
                 <h3>Lägg upp ett inlägg:</h3>
                 <form name="info" id="info"   method="post">
                     		<div id="Thread">
-                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return Validate_Thread()">
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <h2>Title</h2>   <br />
                     <input class="inp" type="text" placeholder="Enter Title" name="title" required id = "title"> 
 					<h2>Post</h2><br />
@@ -74,7 +39,7 @@ function sortList()
                     <span class="error"> <?php if(isset($formError)) echo $formError;?></span> <br />
                     <span class="success"> <?php if(isset($formSuccess)) echo $formSuccess;?></span> <br />
                     </form>
-        
+                    <!--Form för att lägga upp ett inlägg -->
                 </form>
             </div>
             <div id="posts">
@@ -95,7 +60,8 @@ function sortList()
 							</form>
 							</li>
 				  		<?php } ?>
-					</ul>
+                    </ul>
+                    <!--Lista med inläggstitlar som man kan trycka på för att få upp det aktuella inlägget -->
                     <div id="Post">
 					<?php
 					if (isset($_POST['btnChooseThread']))
@@ -115,7 +81,8 @@ function sortList()
         				}
         				echo "</div>";
 					}
-					?>
+                    ?>
+                    <!--php-kod som hämtar ut det valda inlägget från databasen och visar det på sidan -->
 				</div>
             </div>
         </div>

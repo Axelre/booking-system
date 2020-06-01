@@ -1,11 +1,3 @@
-<?php
-if(isset($GET['code'])){
-    $accessToken = getAccessTokenWithCode($_GET['code']);
-    echo '<pre>';
-    print_r($accessToken);
-    die(); 
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +6,6 @@ if(isset($GET['code'])){
         <?php include 'db.php';
         include 'Databaseinfo.php';
         session_start();
-        
         ?>
     </head>
     <body>
@@ -27,27 +18,19 @@ if(isset($GET['code'])){
                     <div id="btn"></div>
                     <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                     <button type="button" class="toggle-btn" onclick="register()">Register</button>
-                </div>
+                </div><!--Val av login eller sign up. Script nere på sidan körs-->
                 <form id="LoginForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <input type="text" class="input-field" placeholder="Enter Username" name="uid" required>
                     <input type="password" class="input-field" placeholder="Enter Password"  name="pwd" required>
                     <input type="submit" class="submit-btn" name ="btnLoginAccount" value="Login"></input>
                     
-                </form>
+                </form><!--Loginform-->
                 <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
                     <input type="text" placeholder="Enter E-mail" name="email" class="input-field" required>
                     <input type="text" placeholder="Enter Username" name="username" class="input-field" required>
                     <input type="password" placeholder="Enter Password" name="password" class="input-field" required>
                     <input type="submit" class="submit-btn" name ="btnCreateAccount" value="Create Account"></input>
-                    <div class="section-action-container">
-                    <a href="#" class="a-fb">
-                    <div class="fb-button-container">
-                    Login with Facebook(PHP)
-                    </div>
-                    </a>
-                </form>
-            </div>
-        </div>
+                </form><!--Signupform-->
         <script>
             var x = document.getElementById("LoginForm");
             var y = document.getElementById("CreateUserForm");
@@ -62,6 +45,6 @@ if(isset($GET['code'])){
                 y.style.left ="450px";
                 z.style.left ="0";
             }
-        </script>
+        </script><!--Script som ändrar form mellan signup och login-->
     </body>
 </html>

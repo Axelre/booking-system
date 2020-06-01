@@ -142,8 +142,8 @@ h2{
   }
 
   .displayweather{
-    background-color: lightblue;
-    color: white;
+    background-color: lightskyblue;
+    color: lightcyan;
     text-align: center;
     position: fixed;
     margin-right: 5%;
@@ -151,9 +151,26 @@ h2{
     width: 400px;
     right: 0px;
     top: 175px;
+    border-radius: 80px;
   }
 
   #desc
   {
     width: 100%;
+  }
+
+  .wbutton
+  {
+    border-radius: 20px;
+    background-color: lightcyan;
+  }
+
+  #weatherday
+  {
+    background-color: lightcyan;
+  }
+
+  #wTitle
+  {
+    color: lightcyan;
   }
