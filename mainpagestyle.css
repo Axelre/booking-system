@@ -140,3 +140,20 @@ h2{
     left: 0px;
     bottom: 175px;
   }
+
+  .displayweather{
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    position: fixed;
+    margin-right: 5%;
+    height: 600px;
+    width: 400px;
+    right: 0px;
+    top: 175px;
+  }
+
+  #desc
+  {
+    width: 100%;
+  }

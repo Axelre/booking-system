@@ -2,7 +2,7 @@
 session_start();
 global $formError;
 
-if (isset($_POST["btnSubmit"]))
+if (isset($_POST["submitbtn"]))
 {
     CreateComment();
 }

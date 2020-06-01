@@ -25,13 +25,22 @@ width: 500px;
    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
    const tiles = L.tileLayer(tileUrl, {attribution});
    tiles.addTo(mymap);
-   L.marker([59.853920, 17.616150]).addTo(mymap);
+   var green = L.icon({
+    iconUrl: 'marker-icon-2x-green.png',
+    iconSize: [24, 40],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+});
+   var marker = L.marker([59.853920, 17.616150], {icon: green}).addTo(mymap);
+   
+
    navigator.geolocation.getCurrentPosition(function(location) {
   const latlng = new L.LatLng(location.coords.latitude, location.coords.longitude);
   L.marker(latlng).addTo(mymap);
-
-
 });
+
 
   </SCRIPT>
 

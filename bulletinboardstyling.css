@@ -1,0 +1,35 @@
+body{
+    background-color: #E0FFFF;
+    height: 800px;}
+
+#header{ 
+    color:white;
+    text-align:center;
+    background-color: black;
+    height: 40px;
+
+
+}
+#upload{
+    padding: 10px 10px 10px 100px;
+}
+#posts{
+    padding: 10px 100px 10px 10px;
+    
+}
+
+.PostBox{
+    width: 445px;
+    padding:20px;
+    margin-bottom:4px;
+    background-color: black;
+    border-radius: 4px;
+    color:white;
+    position:top;
+    float:right;
+    
+}
+#logout{
+    padding-right:20px;
+}
+
