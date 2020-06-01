@@ -30,7 +30,7 @@ function CreateThread()
         $statement->bindParam(':date', $date);
         $statement->execute();
         $formSuccess = "Thread posted!";
-    }
+    }   
 }
 
     function test_input($data) 
