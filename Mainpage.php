@@ -89,7 +89,7 @@ echo $calendar->show();
 </div>
 <div id="mapid"></div>
   <SCRIPT>  
-   const mymap = L.map('mapid').setView([59.85819839999999, 17.646541800000022], 12);
+   const mymap = L.map('mapid').setView([59.85819839999999, 17.646541800000022],2);
    const attribution =  '&copy; <a href = "https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
    const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
    const tiles = L.tileLayer(tileUrl, {attribution});
@@ -97,10 +97,7 @@ echo $calendar->show();
    var green = L.icon({
     iconUrl: 'marker-icon-2x-green.png',
     iconSize: [24, 40],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76],
-    shadowSize: [68, 95],
-    shadowAnchor: [22, 94]
+    iconAnchor: [15, 40],
 });
    var marker = L.marker([59.853920, 17.616150], {icon: green}).addTo(mymap);
    navigator.geolocation.getCurrentPosition(function(location) {
