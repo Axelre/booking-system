@@ -40,16 +40,10 @@ else
             <h1>TAKTERASSEN</h1>
         </div>
         <div class="topnav">
-<<<<<<< HEAD
             <a class="home" href="#home">Home</a>
             <a href="bulletinboard.php">Bulletin board</a>
             <a href="Logout.php">Log Out</a>
             <a href="Mybookings.php">My bookings</a>
-=======
-            <a class="home" href="#home">Hem</a>
-            <a href="#bulletinboard">Bulletin</a>
-            <a href="Logout.php">Logga ut</a>
->>>>>>> cdb900efa5152803256369f764f101fc142736aa
           </div>
           <div class="row">
 
