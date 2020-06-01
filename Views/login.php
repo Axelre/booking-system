@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="errorhandler.js"></script>
+    <script src="../errorhandler.js"></script>
         <title>Login TAKTERRASEN</title>
-        <link rel="stylesheet" href="loginstyle.css?v=1.1">
-        <?php include 'db.php';
-        include 'Databaseinfo.php';
+        <link rel="stylesheet" href="../CSS/loginstyle.css?v=1.1">
+        <?php include '../db.php';
+        include '../Databaseinfo.php';
 
         ?>
     </head>

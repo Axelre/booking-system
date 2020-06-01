@@ -10,7 +10,7 @@ class Booking
     public function __construct()
     {
     
-            $this->dbh = new PDO ('sqlite:Database\Takterassen.db');
+            $this->dbh = new PDO ('sqlite:'.__DIR__.'/Database/Takterassen.db');
 
     }
 

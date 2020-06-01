@@ -1,5 +1,5 @@
 <?php 
-include 'Databaseinfo.php';
+include '../Databaseinfo.php';
 session_start();
 if ( isset( $_SESSION['user_id'] ) ) 
 {
@@ -17,10 +17,8 @@ else
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAKTERRASEN</title>
-    <link rel="stylesheet" type="text/css" href="mainpagestyle.css">
-    <link href="calendar.css" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="MainPage.js"></script>
-    <!-- Javascript för att vadå????????????????????????????????????????????????-->
+    <link rel="stylesheet" type="text/css" href="../CSS/mainpagestyle.css">
+    <link href="../CSS/calendar.css" type="text/css" rel="stylesheet"/>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -44,8 +42,8 @@ else
         </div>
         <div class="topnav">
             <a class="home" href="#home">Home</a>
-            <a href="bulletinboard.php">Bulletin board</a>
-            <a href="Logout.php">Log Out</a>
+            <a href="bulletinboard.php">Anslagstavlan</a>
+            <a href="../Logout.php">Log Out</a>
           </div>
           <div class="row">
 
@@ -65,9 +63,9 @@ else
                   <?php
 
 
-include 'Calendar.php';
-include 'Booking.php';
-include 'BookableCell.php';
+include '../Calendar.php';
+include '../Booking.php';
+include '../BookableCell.php';
  
  
 $booking = new Booking(

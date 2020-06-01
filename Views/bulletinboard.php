@@ -1,6 +1,6 @@
 <?php
-include ('feed.php');
-include ('db.php');
+include ('../feed.php');
+include ('../db.php');
 date_default_timezone_set('Europe/Stockholm');
 
 ?>
@@ -10,7 +10,7 @@ date_default_timezone_set('Europe/Stockholm');
 <head>
 
     <title>Bulletin board</title>
-        <link rel="stylesheet" href="bulletinboardstyling.css"
+        <link rel="stylesheet" href="../CSS/bulletinboardstyling.css"
             type="text/css">
 </head>
 
@@ -22,8 +22,8 @@ date_default_timezone_set('Europe/Stockholm');
         </div>
         <div class="topnav">
             <a href="MainPage.php">Home</a>
-            <a href="bulletinboard.php">Bulletin board</a>
-            <a href="Logout.php">Log Out</a>
+            <a href="bulletinboard.php">Anslagstavlan</a>
+            <a href="../Logout.php">Log Out</a>
           </div>
 
         <div id="content">
@@ -82,7 +82,7 @@ date_default_timezone_set('Europe/Stockholm');
                             if ($row['User_id'] == $_SESSION['user_id'] || $_SESSION['user_id'] == 0)
                             {
                                 echo "
-                                <form class='deleteForm' method='POST' action='DeleteThread.php'>
+                                <form class='deleteForm' method='POST' action='../DeleteThread.php'>
                                 <input type='hidden' name='ThreadID' value='".$row['ThreadID']."'>
                                 <input type ='submit' name ='ThreadDelete' value='Delete'>
                                 </form>";

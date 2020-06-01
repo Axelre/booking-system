@@ -7,5 +7,5 @@ if (isset($_POST['ThreadDelete']))
     $statement->bindParam(':threadid', $ThreadID);
     $statement->execute();
 }
-header('Location: bulletinboard.php');
+header('Location: views/bulletinboard.php');
 ?>
