@@ -18,27 +18,22 @@ function CreateAccount()
         $Password = $_POST['password'];
         $salt = PASSWORD_DEFAULT;
         $salt_password = password_hash($_POST['password'], $salt);
-        global $formError;
-        global $formSucces;
-        global $emailError;
-        global $duplEmail;
-        global $duplUsername;
         if(empty($Username) || empty($Email) || empty($Password))
         {
-            $formError = "please fill in every box";
+            {echo '<script language="javascript">';
+                echo 'window.alert("Du måste fylla i alla fält")';
+                echo '</script>';;}
         }
         else
         {
             if (!filter_var($Email, FILTER_VALIDATE_EMAIL)) 
             {
-                $emailError = "Invalid e-mail format";
                 {echo '<script language="javascript">';
                     echo 'window.alert("Fel format på email")';
                     echo '</script>';;}
             }
             else if (emailExists($Email))
             {
-                $duplEmail = "That E-mail is already in use";
                 {echo '<script language="javascript">';
                     echo 'window.alert("Email redan tagen")';
                     echo '</script>';;}
@@ -46,7 +41,6 @@ function CreateAccount()
         
             else if (usernameExists($Username))
             {
-                $duplUsername = "That Username is already in use";
                 {echo '<script language="javascript">';
                     echo 'window.alert("Användarnamnet redan taget")';
                     echo '</script>';;}
@@ -59,7 +53,6 @@ function CreateAccount()
                 $statement->bindParam(':password', $salt_password);
                 $statement->bindParam(':salt', $salt);
                 $statement->execute();
-                $formSucces = "Your Account has been created!";
             }
         }
 }
@@ -68,7 +61,6 @@ function LoginAccount()
 {
     session_start();
     include 'db.php';
-    global $SuccesVar;
     $LoginUsername = $_POST['uid'];
     $LoginPassword = $_POST['pwd'];
 
@@ -87,7 +79,6 @@ function LoginAccount()
 
     if(password_verify($LoginPassword, $pass))
     {
-        $SuccesVar = "success";
         $_SESSION['user_id'] = $ID;
         $_SESSION['email'] = $LoginEmail;
         $_SESSION['username'] = $LoginUsername;
@@ -95,7 +86,6 @@ function LoginAccount()
     }
     else
     {
-        $SuccesVar = "fail";
         {echo '<script language="javascript">';
             echo 'window.alert("Användarnamn och lösenord stämmer inte överens")';
             echo '</script>';;}

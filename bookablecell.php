@@ -48,7 +48,7 @@ class BookableCell
         include 'db.php';
         $userid = $_SESSION['user_id'];
 
-        if ($this->UserId($date) === $userid) {return '<div class="bookedbyme">'. $date . ' ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
+        if ($this->UserId($date) === $userid || $userid === "0") {return '<div class="bookedbyme">'. $date . ' ' . $this->deleteForm($this->bookingId($date)) . '</div>';}
 
 
         else {return '<div class="booked">   '. $date . ' </div>';}
