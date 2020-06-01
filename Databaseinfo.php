@@ -67,9 +67,14 @@ function LoginAccount()
     $statement->bindParam(':LoginUsername', $LoginUsername);
     $statement->execute();
     $user = $statement->fetch();
+    if(!isset($user['User_id'])){echo '<script language="javascript">';
+        echo 'window.alert("Användaren finns inte")';
+        echo '</script>';;} else
+    {
     $pass = $user['Password'];
     $LoginEmail = $user['Email'];
     $ID = $user['User_id'];
+    }
 
     if(password_verify($LoginPassword, $pass))
     {
@@ -82,6 +87,9 @@ function LoginAccount()
     else
     {
         $SuccesVar = "fail";
+        {echo '<script language="javascript">';
+            echo 'window.alert("Användarnamn och lösenord stämmer inte överens")';
+            echo '</script>';;}
     }
 }
 

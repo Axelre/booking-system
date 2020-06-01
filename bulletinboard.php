@@ -26,7 +26,9 @@ date_default_timezone_set('Europe/Stockholm');
             <div id="logout" align="right">
             <!--logga ut-knappen -->
             <a id="logoutbtn" href='Logout.php' >Logga ut  </a>
+            
             </div>
+            <a class="home" href="Mainpage.php">Home</a>
         </div>
 
         <div id="content">

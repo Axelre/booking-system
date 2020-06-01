@@ -36,5 +36,10 @@ body{
 #logout{
     padding-right:20px;
     color:black;
+    margin-right: 10px;
+}
+a.home{
+    float: right;
+    margin-right: 48px;
 }
 

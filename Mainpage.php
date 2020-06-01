@@ -43,7 +43,6 @@ else
             <a class="home" href="#home">Home</a>
             <a href="bulletinboard.php">Bulletin board</a>
             <a href="Logout.php">Log Out</a>
-            <a href="Mybookings.php">My bookings</a>
           </div>
           <div class="row">
 
