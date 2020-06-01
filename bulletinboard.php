@@ -44,8 +44,7 @@ date_default_timezone_set('Europe/Stockholm');
                 </form>
             </div>
             <div id="posts">
-                <h3>Upplagda inlägg: <input type="submit" class="button" name="insert" value="Nyast först" />
-                <input type="submit" class="button" name="select" value="Äldst först" /></h3>
+                <h3>Upplagda inlägg:</h3>
                 <?php 
                 $stmt = "SELECT * FROM Threads ORDER BY DATE DESC";
                 $sql = $db->prepare($stmt);
