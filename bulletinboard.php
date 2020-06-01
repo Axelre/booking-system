@@ -10,16 +10,8 @@ date_default_timezone_set('Europe/Stockholm');
 <head>
 
     <title>Bulletin board</title>
-<<<<<<< HEAD
         <link rel="stylesheet" href="bulletinboardstyling.css"
             type="text/css">
-=======
-        <link rel="stylesheet" href="bulletinboardstyling.css" type="text/css">
-            <?php
-
-
- ?>
->>>>>>> f3e91e0cfb9f541d2b3e615e58a69e907cee566d
 </head>
 
 <body>
@@ -53,8 +45,7 @@ date_default_timezone_set('Europe/Stockholm');
                 </form>
             </div>
             <div id="posts">
-                <h3>Upplagda inlägg: <input type="submit" class="button" name="insert" value="Nyast först" />
-<input type="submit" class="button" name="select" value="Äldst först" /></h3>
+                <h3>Upplagda inlägg:x</h3>
 
 
 </select>
