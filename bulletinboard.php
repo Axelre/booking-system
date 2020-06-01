@@ -1,7 +1,7 @@
 <?php
 include ('feed.php');
 include ('db.php');
-session_start();
+
 
 ?>
 <!DOCTYPE html>
@@ -48,7 +48,9 @@ session_start();
             </div>
             <div id="posts">
                 <h3>Upplagda inlägg:</h3>
-                <?php $sql = $db->query('SELECT * FROM Threads'); ?>
+                <?php $sql = $db->prepare('SELECT * FROM Threads');
+                $sql->execute();
+                $sql->setFetchMode(PDO::FETCH_ASSOC); ?>
 					<ul>
 						<?php while ($row = $sql->fetch())
 						{?>
