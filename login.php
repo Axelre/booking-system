@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="errorhandler.js"></script>
         <title>Login Takterassen</title>
         <link rel="stylesheet" href="loginstyle.css?v=1.1">
         <?php include 'db.php';
@@ -20,13 +21,13 @@
                     <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                     <button type="button" class="toggle-btn" onclick="register()">Register</button>
                 </div>
-                <form id="LoginForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <form id="LoginForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return loginerrorhandling();">
                     <input type="text" class="input-field" placeholder="Enter Username" name="uid" required>
                     <input type="password" class="input-field" placeholder="Enter Password"  name="pwd" required>
                     <input type="submit" class="submit-btn" name ="btnLoginAccount" value="Login"></input>
                     
                 </form>
-                <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return registererrorhandling();";>
                     <input type="text" placeholder="Enter E-mail" name="email" class="input-field" required>
                     <input type="text" placeholder="Enter Username" name="username" class="input-field" required>
                     <input type="password" placeholder="Enter Password" name="password" class="input-field" required>
