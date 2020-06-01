@@ -1,7 +1,7 @@
 <?php
 include ('feed.php');
 include ('db.php');
-
+date_default_timezone_set('Europe/Stockholm');
 
 ?>
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ include ('db.php');
 						<?php while ($row = $sql->fetch())
 						{?>
 							<li>
-							<?php $id = $row['ThreadID']?>
+                            <?php $id = $row['ThreadID']?>
 							<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
 							<input type ="hidden" name ='IDvalue' value="<?php echo $row['ThreadID'] ?>"></input>
 							<button type ="submit" name ="btnChooseThread"><?php echo $row['Title']?></button>
@@ -70,7 +70,7 @@ include ('db.php');
 					<?php
 					if (isset($_POST['btnChooseThread']))
     				{
-						$ID = $_POST['IDvalue'];
+                        $ID = $_POST['IDvalue']; 
 						$statement =$db->prepare('SELECT * FROM Threads WHERE ThreadID = :ID');
 						$statement->bindParam(':ID', $ID);
 						$statement->execute();
