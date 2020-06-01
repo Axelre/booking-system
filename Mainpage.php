@@ -133,6 +133,8 @@ echo $calendar->show();
         <p id="humidity"></p></br>
         <p id="desc"></p></br>
     </div><!--paragrafer och ikoner som kommer att fyllas med information vi hämtar via vår väderapi-->
+<img src="marker-icon-2x-green.png" width="10px" height="15"> 
+
 <script>
 
 function getWeather(day)

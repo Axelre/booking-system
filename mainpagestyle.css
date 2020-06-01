@@ -174,3 +174,10 @@ h2{
   {
     color: lightcyan;
   }
+
+  img{
+    margin-bottom: 100px;
+    width: 10px;
+    height: 15px;
+
+  }
