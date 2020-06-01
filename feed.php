@@ -23,7 +23,7 @@ function CreateThread()
         
     else
     {
-        $statement =$db->prepare("INSERT INTO Threads (Title, TextPost , UserID, Date) VALUES (:title , :textPost , :userID , :date)");
+        $statement =$db->prepare("INSERT INTO Threads (Title, TextPost , User_id, Date) VALUES (:title , :textPost , :userID , :date)");
         $statement->bindParam(':title', $Title);
         $statement->bindParam(':textPost', $Thread);
         $statement->bindParam(':userID', $_SESSION['user_id']);

@@ -146,7 +146,7 @@ echo $calendar->show();
 
 function getWeather(day)
 {
-  fetch('https://api.openweathermap.org/data/2.5/onecall?lat=59.8586&lon=17.6389&units=metric&lang=se&appid=8704ed9bc9d4d04fcfe7d10ced95aead')
+  fetch('https://api.openweathermap.org/data/2.5/onecall?lat=59.853920&lon=17.616150&units=metric&lang=se&appid=8704ed9bc9d4d04fcfe7d10ced95aead')
   .then(response => response.json())
   .then(data =>
   {
