@@ -16,7 +16,7 @@ else
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAKTERRASEN</title>
+    <title>TAKTERRASSEN</title>
     <link rel="stylesheet" type="text/css" href="../CSS/mainpagestyle.css">
     <link href="../CSS/calendar.css" type="text/css" rel="stylesheet"/>
     <meta charset="UTF-8">
@@ -38,7 +38,7 @@ else
 <body>
     <div id="container">
         <div class="header">
-            <h1>TAKTERRASEN</h1>
+            <h1>TAKTERRASSEN</h1>
         </div>
         <div class="topnav">
             <a class="home" href="#home">Home</a>
@@ -86,7 +86,7 @@ echo $calendar->show();
 </div>
 <h4> Blå pil = Din position</h4>
               <h4> 
-              Grön pil = Takterassens position
+              Grön pil = Takterrassens position
               </h4>
 
 

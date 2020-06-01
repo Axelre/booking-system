@@ -18,7 +18,7 @@ date_default_timezone_set('Europe/Stockholm');
 
     <div id="container">
         <div id="header">
-            <h1>TAKTERRASEN</h1>
+            <h1>TAKTERRASSEN</h1>
         </div>
         <div class="topnav">
             <a href="MainPage.php">Home</a>

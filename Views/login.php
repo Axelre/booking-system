@@ -2,7 +2,7 @@
 <html>
     <head>
     <script src="../errorhandler.js"></script>
-        <title>Login TAKTERRASEN</title>
+        <title>Login TAKTERRASSEN</title>
         <link rel="stylesheet" href="../CSS/loginstyle.css?v=1.1">
         <?php include '../db.php';
         include '../Databaseinfo.php';
@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="header">
-            <h1>TAKTERRASEN</h1>
+            <h1>TAKTERRASSEN</h1>
         </div>
         <div class="background">
             <div class="form-box">
