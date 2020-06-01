@@ -10,6 +10,16 @@ body{
 
 
 }
+
+.topnav{
+    text-align: center;
+}
+ .topnav a{
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+ }
+
 #upload{
     padding: 10px 10px 10px 100px;
     float :left;

@@ -18,14 +18,13 @@ date_default_timezone_set('Europe/Stockholm');
 
     <div id="container">
         <div id="header">
-            <h1>Takterassen</h1>
-            <div id="logout" align="right">
-            <!--logga ut-knappen -->
-            <a id="logoutbtn" href='Logout.php' >Logga ut  </a>
-            
-            </div>
-            <a class="home" href="Mainpage.php">Home</a>
+            <h1>TAKTERRASEN</h1>
         </div>
+        <div class="topnav">
+            <a href="MainPage.php">Home</a>
+            <a href="bulletinboard.php">Bulletin board</a>
+            <a href="Logout.php">Log Out</a>
+          </div>
 
         <div id="content">
             <div id="upload">
@@ -81,6 +80,14 @@ date_default_timezone_set('Europe/Stockholm');
                             echo "</h4>";
                             echo $row['TextPost']. "<br/>";
                             echo $row['Date'];
+                            if ($row['User_id'] == $_SESSION['user_id'] || $_SESSION['user_id'] == 0)
+                            {
+                                echo "
+                                <form class='deleteForm' method='POST' action='DeleteThread.php'>
+                                <input type='hidden' name='ThreadID' value='".$row['ThreadID']."'>
+                                <input type ='submit' name ='ThreadDelete' value='Delete'>
+                                </form>";
+                            }
         				}
         				echo "</div>";
 					}
