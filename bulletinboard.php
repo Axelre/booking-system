@@ -48,7 +48,10 @@ include ('db.php');
             </div>
             <div id="posts">
                 <h3>Upplagda inlägg:</h3>
-                <?php $sql = $db->prepare('SELECT * FROM Threads');
+                <?php 
+                
+                $stmt = "SELECT * FROM Threads";
+                $sql = $db->prepare($stmt);
                 $sql->execute();
                 $sql->setFetchMode(PDO::FETCH_ASSOC); ?>
 					<ul>
