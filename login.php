@@ -19,24 +19,14 @@
                     <div id="btn"></div>
                     <button type="button" class="toggle-btn" onclick="login()">Log In</button>
                     <button type="button" class="toggle-btn" onclick="register()">Register</button>
-<<<<<<< HEAD
                 </div><!--Val av login eller sign up. Script nere på sidan körs-->
-                <form id="LoginForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-=======
-                </div>
                 <form id="LoginForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return loginerrorhandling();">
->>>>>>> f3e91e0cfb9f541d2b3e615e58a69e907cee566d
                     <input type="text" class="input-field" placeholder="Enter Username" name="uid" required>
                     <input type="password" class="input-field" placeholder="Enter Password"  name="pwd" required>
                     <input type="submit" class="submit-btn" name ="btnLoginAccount" value="Login"></input>
                     
-<<<<<<< HEAD
-                </form><!--Loginform-->
-                <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-=======
                 </form>
                 <form id="CreateUserForm" class="formclass" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" onsubmit="return registererrorhandling();";>
->>>>>>> f3e91e0cfb9f541d2b3e615e58a69e907cee566d
                     <input type="text" placeholder="Enter E-mail" name="email" class="input-field" required>
                     <input type="text" placeholder="Enter Username" name="username" class="input-field" required>
                     <input type="password" placeholder="Enter Password" name="password" class="input-field" required>
